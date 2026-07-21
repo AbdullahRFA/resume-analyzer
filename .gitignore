@@ -1,0 +1,22 @@
+# Ignore Data
+data/
+*.pdf
+*.txt
+*.csv
+
+# Ignore Virtual Environments
+env/
+venv/
+.venv/
+
+# Ignore Python Caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore Jupyter Checkpoints
+.ipynb_checkpoints/
+
+# Ignore OS System Files
+.DS_Store
+Thumbs.db

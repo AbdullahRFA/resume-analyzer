@@ -46,3 +46,6 @@ pip install -r requirements.txt
 
 # 4. Download the base English NLP model for Spacy
 python3 -m spacy download en_core_web_sm
+
+# for runnig strealit
+streamlit run main.py

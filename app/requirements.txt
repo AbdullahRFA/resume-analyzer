@@ -1,6 +1,0 @@
-streamlit
-spacy
-sentence-transformers
-scikit-learn
-PyPDF2
-pdfplumber

@@ -1,4 +1,3 @@
-# app/engine.py
 import spacy
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity

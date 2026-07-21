@@ -11,11 +11,11 @@
 
 ## 🌟 Key Features
 
-* **Intelligent PDF Parsing:** Robust extraction of text and metadata from resume documents using a dedicated parsing module.
-* **NLP & Entity Recognition:** Leverages `spaCy` to identify critical entities such as skills, education, experience, and contact information.
-* **Modular Architecture:** Cleanly separated concerns with distinct parsing, processing engine, and application layers.
-* **Research-Ready:** Includes Jupyter notebooks for transparent testing and model evaluation before deploying into the core application.
-* **Cloud & Deployment Ready:** Configured with standard runtime profiles (`runtime.txt`, `setup.sh`, `packages.txt`) for immediate deployment to PaaS providers like Heroku or Render.
+- **Intelligent PDF Parsing:** Robust extraction of text and metadata from resume documents using a dedicated parsing module.
+- **NLP & Entity Recognition:** Leverages `spaCy` to identify critical entities such as skills, education, experience, and contact information.
+- **Modular Architecture:** Cleanly separated concerns with distinct parsing, processing engine, and application layers.
+- **Research-Ready:** Includes Jupyter notebooks for transparent testing and model evaluation before deploying into the core application.
+- **Cloud & Deployment Ready:** Configured with standard runtime profiles (`runtime.txt`, `setup.sh`, `packages.txt`) for immediate deployment to PaaS providers like Heroku or Render.
 
 ---
 
@@ -45,39 +45,47 @@ resume-analyzer/
 ## ⚙️ Installation & Setup
 
 ### Prerequisites
-* **Python:** `3.11` (Strictly enforced via `.python-version`)
-* **pip:** Python package installer
+
+- **Python:** `3.11` (Strictly enforced via `.python-version`)
+- **pip:** Python package installer
 
 ### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/your-org/resume-analyzer.git
 cd resume-analyzer
 ```
 
 ### 2. Environment Setup
+
 We recommend using a virtual environment to manage dependencies:
+
 ```bash
 python3.11 -m venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
 ```
 
 Alternatively, you can run the provided setup script which handles system dependencies and initialization:
+
 ```bash
 bash setup.sh
 ```
 
 ### 3. Install Dependencies
+
 ```bash
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
-*(Note: If the application requires system-level packages, refer to `packages.txt` for `apt-get` or `brew` equivalents).*
+
+_(Note: If the application requires system-level packages, refer to `packages.txt` for `apt-get` or `brew` equivalents)._
 
 ---
 
 ## 🚀 Usage
 
 ### Running the Application Core
+
 To execute the main analyzer pipeline, run the entry point script:
 
 ```bash
@@ -85,25 +93,52 @@ python -m app.main
 ```
 
 ### Exploring the Notebooks
+
 If you are developing new NLP rules or testing PDF parsing accuracy, spin up Jupyter Lab:
 
 ```bash
 jupyter lab
 ```
-*   **`01_pdf_testing.ipynb`**: Use this to validate how well `app.parser` handles varied PDF formats.
-*   **`02_spacy_testing.ipynb`**: Use this to visualize Named Entity Recognition (NER) and tweak spaCy pipelines.
+
+- **`01_pdf_testing.ipynb`**: Use this to validate how well `app.parser` handles varied PDF formats.
+- **`02_spacy_testing.ipynb`**: Use this to visualize Named Entity Recognition (NER) and tweak spaCy pipelines.
 
 ---
 
 ## 🧠 System Architecture
 
+|                            NLP PipeLine                             |
+| :-----------------------------------------------------------------: |
+| <img src="SS/Screenshot 2026-07-21 at 10.12.07 AM.png" width="800"> |
+
 1. **Parser (`app/parser.py`):** Ingests raw PDF/Docx files, sanitizes the text, and normalizes the format.
 2. **Engine (`app/engine.py`):** Takes the sanitized text and applies NLP models (spaCy) to categorize data into buckets (Skills, Experience, Education, Certifications).
 3. **Main (`app/main.py`):** Orchestrates the workflow, handling I/O, user requests, and returning structured JSON or reports.
 
-*(For deeper context into the architectural logic, please refer to `knowledge.md` and `info.md`).*
+_(For deeper context into the architectural logic, please refer to `knowledge.md` and `info.md`)._
 
 ---
+
+## 📸 Screenshots
+
+|                                Top                                 |
+| :----------------------------------------------------------------: |
+| <img src="SS/Screenshot 2026-07-21 at 2.38.22 PM.png" width="800"> |
+
+|                               Middle                               |
+| :----------------------------------------------------------------: |
+| <img src="SS/Screenshot 2026-07-21 at 2.38.32 PM.png" width="800"> |
+
+|                               Bottom                               |
+| :----------------------------------------------------------------: |
+| <img src="SS/Screenshot 2026-07-21 at 2.38.54 PM.png" width="800"> |
+
+## 🔮 Future Work & Roadmap
+
+- **Automated Testing & SQA:** Implement comprehensive automation testing pipelines using Playwright and Selenium to ensure the parser's robustness across edge-case PDF formats.
+- **RESTful API Backend:** Develop a robust backend architecture using Django or Node.js to expose the core parsing engine to web clients.
+- **Mobile Companion App:** Build a cross-platform mobile application using Flutter and Firebase to allow on-the-go resume scanning and instant analysis.
+- **Advanced Machine Learning:** Explore advanced ML techniques and benchmark lightweight neural networks to improve document layout classification and real-time processing speeds.
 
 ## 🤝 Contributing
 
@@ -112,6 +147,16 @@ jupyter lab
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
+## 👨‍💻 Author
+
+**Abdullah Nazmus-Sakib**
+
+- **Role:** Computer Science & Engineering Undergraduate Developer
+- **Specializations:** Full-Stack Developer (MERN, Python/Django/Flask, Next.js, TypeScript, MySQL) | AI/ML & SQA Learner | Flutter Developer
+- **Status:** Aspiring Software Engineer | Open to Software Engineering Internships
+- **GitHub:** [@AbdullahRFA](https://github.com/AbdullahRFA)
+- **LinkedIn:** [@AbdullahRFA](https://www.linkedin.com/in/abdullahrfa/)
 
 ## 📄 License
 

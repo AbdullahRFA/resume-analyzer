@@ -49,3 +49,6 @@ python3 -m spacy download en_core_web_sm
 
 # for runnig strealit
 streamlit run main.py
+
+# for getting dependencies
+pip freeze > requirements.txt

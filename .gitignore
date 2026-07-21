@@ -1,7 +1,6 @@
 # Ignore Data
 data/
 *.pdf
-*.txt
 *.csv
 
 # Ignore Virtual Environments
